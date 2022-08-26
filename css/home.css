@@ -1,0 +1,24 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  height: 100%;
+}
+
+.grid-item {
+  grid-gap: 20px;
+  text-align: center;
+  width: 50%;
+  height: 50%;
+  overflow:scroll;
+}
+gridl {
+    margin: 1%;
+    width: 23%;
+    height: 23%;
+    float: left;
+}
+gridr {
+    margin: 1%;
+    width: 23%;
+    float: right;
+}

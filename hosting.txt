@@ -1,0 +1,9 @@
+oracle
+aws
+awardspace
+google cloud
+000webhosting
+prismic.io
+
+--dns--
+cloudflare

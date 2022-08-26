@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title id="title">Do It!</title>
+    </head>
+    <body>
+        <div id="task">
+            <h1 id="name"></h1>
+            <p id="date"></p>
+        </div>
+    <script>
+        function get(url) {
+            const xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var lines = this.responseText.split(/[\n\r]+/);
+                    lines.slice(1).forEach(line => {
+                        console.log(line);
+                        json = JSON.parse(line);
+                        console.log(json);
+                    });
+                }
+            };
+            xhttp.open("GET", url);
+            xhttp.send();
+        }
+        get("tasks.php");
+    </script>
+    </body>
+</html>
